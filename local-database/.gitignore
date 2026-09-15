@@ -1,0 +1,8 @@
+# Local secrets and environment — never committed.
+.env
+.env.*
+!.env.example
+
+# Runtime and editor artifacts.
+*.log
+.DS_Store

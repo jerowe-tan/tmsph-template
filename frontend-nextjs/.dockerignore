@@ -1,0 +1,19 @@
+# Dependencies and build output.
+node_modules
+.next
+out
+
+# Version control and logs.
+.git
+.gitignore
+*.log
+npm-debug.log*
+
+# variables
+.env*
+
+# Test and misc artifacts.
+coverage
+.nyc_output
+playwright-report
+test-results

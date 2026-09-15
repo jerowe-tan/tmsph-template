@@ -1,0 +1,32 @@
+# Identity stack: Postgres for Better Auth (auth_db) and product data.
+#
+# Usage (from this folder):
+#   docker compose up --build -d   # start (pulls/builds as needed)
+#   docker compose logs -f db      # follow the database logs
+#   docker compose down            # stop; pgdata volume keeps all data
+#   docker compose down -v         # stop AND delete all data (deliberate only)
+#
+# The database is reachable at 127.0.0.1:5432 from this machine only.
+# Services inside this Compose network reach it as hostname `db`.
+
+services:
+  db:
+    image: postgres:17-alpine
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      POSTGRES_USER: tmsph
+      POSTGRES_DB: tmsph
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U tmsph"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+volumes:
+  pgdata:

@@ -1,0 +1,34 @@
+/* Semantic utilities: bg-brand-primary, text-brand-on-primary, border-border. */
+@theme inline {
+  --font-sans: var(--font-toyota-type), Arial, Helvetica, sans-serif;
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-primary-hover: var(--brand-primary-hover);
+  --color-brand-primary-active: var(--brand-primary-active);
+  --color-brand-on-primary: var(--brand-on-primary);
+  --color-brand-secondary: var(--brand-secondary);
+  --color-brand-on-secondary: var(--brand-on-secondary);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-muted: var(--text-muted);
+  --color-border: var(--border);
+  --color-divider: var(--divider);
+  --color-focus: var(--focus);
+  --color-error: var(--status-error);
+  --color-error-surface: var(--status-error-surface);
+  --color-success: var(--status-success);
+  --color-success-surface: var(--status-success-surface);
+  --color-warning: var(--status-warning);
+  --color-warning-surface: var(--status-warning-surface);
+  --color-info: var(--status-info);
+  --color-info-surface: var(--status-info-surface);
+}
+
+/* Mobile-first min-widths; rem matches Tailwind's built-in units.
+   xs2 < xs < sm. xl2 is an alias for the existing 2xl breakpoint. */
+@theme {
+  --breakpoint-xs2: 22.5rem; /* 360px at the browser's default 16px font size */
+  --breakpoint-xs: 30rem; /* 480px */
+  --breakpoint-xl2: 96rem; /* 1536px; same as 2xl */
+}

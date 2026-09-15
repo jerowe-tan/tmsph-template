@@ -1,0 +1,37 @@
+/* Official Toyota palette. Other tokens below are application design choices. */
+:root {
+  --toyota-red: #eb0a1e;
+  --toyota-white: #ffffff;
+  --toyota-black: #000000;
+  --toyota-gray: #58595b;
+
+  --brand-primary: var(--toyota-red);
+  --brand-primary-hover: #c90819;
+  --brand-primary-active: #a80715;
+  --brand-on-primary: var(--toyota-white);
+  --brand-secondary: var(--toyota-black);
+  --brand-on-secondary: var(--toyota-white);
+  --background: var(--toyota-white);
+  --foreground: var(--toyota-black);
+  --surface: var(--toyota-white);
+  --surface-muted: #f5f5f5;
+  --text-muted: var(--toyota-gray);
+  --border: #767676;
+  --divider: #dedede;
+  --focus: var(--toyota-black);
+
+  /* Status meaning is independent of the red brand accent. */
+  --status-error: #b42318;
+  --status-error-surface: #fff1f0;
+  --status-success: #176b3a;
+  --status-success-surface: #edf8f0;
+  --status-warning: #805500;
+  --status-warning-surface: #fff8e6;
+  --status-info: #175a8a;
+  --status-info-surface: #eef6fc;
+
+  --radius-control: 0.25rem;
+  --radius-card: 0.5rem;
+  --control-height: 2.75rem;
+  --motion-fast: 150ms;
+}
