@@ -4,6 +4,9 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactCompiler: true,
   output: "standalone",
+  experimental: {
+    optimizePackageImports: ["@phosphor-icons/react"],
+  },
   images: {
     remotePatterns: [
       {

@@ -10,6 +10,11 @@ if (!dataSource.isInitialized) {
 
 const auth = betterAuth({
   database: typeormAdapter(dataSource),
+  baseURL: process.env.CLIENT_URL,
+  trustedOrigins: (process.env.TRUSTED_ORIGINS ?? '')
+    .split(',')
+    .map((s) => s.trim())
+    .filter((s) => s.length > 0),
   emailAndPassword: {
     enabled: true,
   },
